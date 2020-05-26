@@ -5,10 +5,7 @@ import sys
 
 
 def main():
-    if os.environ.get('DJANGO_ENV') == 'production':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoFrontEnd.production')
-    else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoFrontEnd.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoFrontEnd.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
