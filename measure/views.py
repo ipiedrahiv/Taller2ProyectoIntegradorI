@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -8,7 +9,7 @@ import requests
 def measure(request):
     if request.method == "POST":
         args = {
-            'type' : 'mayo26',
+            'type' : 'Temperatura',
             'codigo' : request.POST['codigo'],
             'value' : request.POST['value'],
             'scale' : request.POST['scale'],
