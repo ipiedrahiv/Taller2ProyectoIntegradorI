@@ -8,7 +8,7 @@ import requests
 def measure(request):
     if request.method == "POST":
         args = {
-            'type' : 'mayo12',
+            'type' : 'mayo26',
             'codigo' : request.POST['codigo'],
             'value' : request.POST['value'],
             'scale' : request.POST['scale'],
@@ -18,9 +18,9 @@ def measure(request):
             'terreno' : request.POST['terreno'],
         }
         print(args)
-        response = requests.post('http://127.0.0.1:8000/measure/', args)
+        response = requests.post('https://p1-back.azurewebsites.net/', args)
         measure_json = response.json()
 
-    response = requests.get('http://127.0.0.1:8000/measure/')
+    response = requests.get('https://p1-back.azurewebsites.net/')
     measures = response.json()
     return render(request, "measure/measure.html", {'measures': measures})
