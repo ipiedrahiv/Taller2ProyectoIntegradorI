@@ -1,4 +1,4 @@
 --find-links wheelhouse
-django==3.0.3
+django==3.0.12
 djangorestframework==3.11.0
 mysqlclient==1.4.6
